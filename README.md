@@ -1,2 +1,2 @@
 # MemoryExpTracker
- Tracks GPU stock at memory express
+An Application that scrapes the Memory Express store for GPU (or other data, links can be replaced as necessary) products in each region, and exposes a Flask API for further parsing or alert and notifications systems
