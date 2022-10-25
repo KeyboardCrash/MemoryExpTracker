@@ -24,10 +24,8 @@ def setup():
         for page in range(1, numPages):
             pagecontent = requests.get(url + '&Page=' + str(page))
             soup = BeautifulSoup(pagecontent.content, 'html.parser')
-
             a = soup.find_all('div', 'c-shca-icon-item__body-name')
             records.extend(a)
-
 
         for record in records:
             redirect = record.find('a', href=True)
@@ -40,7 +38,7 @@ def setup():
             productList[url] = name
         
         # print(productList)
-        log('number of products found: ' + len(productList))
+        log('number of products found: ' + str(len(productList)))
     except Exception as e:
         print('exception hit in setup', e)
 
@@ -122,11 +120,11 @@ def get_data():
     print('\r\n')
 
 def generate():
-    thread = Thread(target=scrape_gpu, daemon=True, args=())
+    thread = Thread(target=scrape_product, daemon=True, args=())
     thread.start()
     log('Scraper thread started')
 
-def scrape_gpu():
+def scrape_product():
     global cacheTime
     global productData
     global tempData

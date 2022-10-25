@@ -16,5 +16,6 @@ class StagingConfig(Config):
 class DevelopmentConfig(Config):
     DEBUG = True
     DEVELOPMENT = True
-    SCRAPE_URL = "https://www.memoryexpress.com/Category/VideoCards?FilterID=b9021f59-29a3-73a7-59b5-125edab939f2&PageSize=120"
-    NUM_OF_PAGES = 3
+    # SCRAPE_URL = "https://www.memoryexpress.com/Category/VideoCards?FilterID=b9021f59-29a3-73a7-59b5-125edab939f2&PageSize=120"
+    SCRAPE_URL = "https://www.memoryexpress.com/Category/Processors?PageSize=120"
+    NUM_OF_PAGES = 2

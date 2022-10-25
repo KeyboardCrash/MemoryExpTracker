@@ -14,12 +14,12 @@ def home():
         <p>Scrapes Memory Express for high demand products</p>
     '''
 
-@app.route('/api/v1/memoryexpress/gpu/all', methods=['GET'])
-def gpu_all():
+@app.route('/api/v1/memoryexpress/all', methods=['GET'])
+def allData():
     return jsonify(productData)
 
-@app.route('/api/v1/memoryexpress/gpu/temp', methods=['GET'])
-def gpu_tempData():
+@app.route('/api/v1/memoryexpress/temp', methods=['GET'])
+def tempData():
     return jsonify(tempData)
 
 # Try to spin up the web server
